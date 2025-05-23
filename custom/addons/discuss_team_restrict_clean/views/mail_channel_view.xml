@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_mail_channel_form_inherit_team_restrict" model="ir.ui.view">
+        <field name="name">mail.channel.form.team.restrict</field>
+        <field name="model">mail.channel</field>
+        <field name="inherit_id" ref="mail.view_mail_channel_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='channel_type']" position="after">
+                <field name="allowed_team_ids" widget="many2many_tags"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
